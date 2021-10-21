@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/game_control_background"></LinearLayout>
+    android:background="@color/game_control_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/wrapCenterWeight1">
+
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/play" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/wrapCenterWeight1">
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/textStyle"
+            android:text="6"/>
+    </LinearLayout>
+</LinearLayout>
