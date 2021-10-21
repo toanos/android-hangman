@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="game_state_background">#F00F</color>
+    <color name="game_result_background">#F0F0</color>
+    <color name="game_control_background">#FF00</color>
+    <color name="buttonColor">#F555</color>
+    <color name="inputColor">#FFF0</color>
 </resources>
