@@ -20,9 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView status = (TextView) findViewById(R.id.status);
         status.setText("" + game.getGuessesLeft());
+        if (getSupportFragmentManager().findFragmentById(R.id.game_state) == null) {
+            // TODO create fragment and add it to the activity
+        }
     }
 
     public void play() {
         // TODO implement play()
     }
+
+    public Hangman getGame() { return game; }
 }
