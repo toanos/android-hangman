@@ -59,7 +59,6 @@ public class Hangman {
                 won = false;
                 break;
             }
-
         if (won) // won
             return 1;
         else if (guessesLeft == 0) // lost
