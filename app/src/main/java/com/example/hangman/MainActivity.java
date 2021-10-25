@@ -21,11 +21,19 @@ public class MainActivity extends AppCompatActivity {
         TextView status = (TextView) findViewById(R.id.status);
         status.setText("" + game.getGuessesLeft());
         if (getSupportFragmentManager().findFragmentById(R.id.game_state) == null) {
-            // TODO create fragment and add it to the activity
+            // create fragment and add it to the activity
             GameStateFragment fragment = new GameStateFragment();
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
                     .add(R.id.game_state, fragment, null)
+                    .commit();
+        }
+        if (getSupportFragmentManager().findFragmentById(R.id.game_result) == null) {
+            // create fragment and add it to the activity
+            GameResultFragment fragment = new GameResultFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.game_result, fragment, null)
                     .commit();
         }
     }
