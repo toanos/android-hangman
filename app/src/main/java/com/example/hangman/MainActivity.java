@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         status.setText("" + game.getGuessesLeft());
         if (getSupportFragmentManager().findFragmentById(R.id.game_state) == null) {
             // TODO create fragment and add it to the activity
+            GameStateFragment fragment = new GameStateFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.game_state, fragment, null)
+                    .commit();
         }
     }
 

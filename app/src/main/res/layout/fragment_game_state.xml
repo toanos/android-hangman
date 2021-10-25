@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical">
 
     <LinearLayout style="@style/wrapCenterWeight1">
-        <TextView style="@style/textStyle"
-            android:id="@+id/state_of_game" />
+
+        <TextView
+            android:id="@+id/state_of_game"
+            style="@style/textStyle" />
     </LinearLayout>
 
     <LinearLayout style="@style/wrapCenterWeight1">
-        <EditText style="@style/editTextStyle"
+
+        <EditText
             android:id="@+id/letter"
+            style="@style/editTextStyle"
             android:imeOptions="actionDone" />
     </LinearLayout>
 

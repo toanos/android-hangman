@@ -10,12 +10,11 @@
 
         <Button
             style="@style/buttonStyle"
-            android:text="@string/play"
-            android:onClick="play" />
+            android:onClick="play"
+            android:text="@string/play" />
     </LinearLayout>
 
     <LinearLayout style="@style/wrapCenterWeight1">
-
         <TextView
             android:id="@+id/status"
             style="@style/textStyle" />
