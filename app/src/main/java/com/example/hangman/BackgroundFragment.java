@@ -1,6 +1,8 @@
 package com.example.hangman;
 
-public class BackgroundFragment {
+import androidx.fragment.app.Fragment;
+
+public class BackgroundFragment extends Fragment {
 
     public BackgroundFragment() {}
 

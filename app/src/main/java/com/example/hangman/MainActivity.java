@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.game_result, fragment, null)
                     .commit();
         }
+        if (getSupportFragmentManager().findFragmentByTag("background") == null) {
+            // create fragment and add it to the activity
+            BackgroundFragment fragment = new BackgroundFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(fragment, "background")
+                    .commit();
+        }
     }
 
     public void play(View view) {
@@ -62,15 +70,15 @@ public class MainActivity extends AppCompatActivity {
             // clear EditText
             input.setText("");
 
-            // TODO check if there is only one guess left
-//            if( game.getGuessesLeft( ) == 1 ) {
-//                BackgroundFragment background = ( BackgroundFragment )
-//                        getSupportFragmentManager().findFragmentByTag( __________ );
-//                GameResultFragment grFragment = ( GameResultFragment )
-//                        getSupportFragmentManager().findFragmentById( ______________ );
-//                // retrieve warning and display it
-//                grFragment.setResult( _____________________ );
-//            }
+            // check if there is only one guess left
+            if( game.getGuessesLeft( ) == 1 ) {
+                BackgroundFragment background = (BackgroundFragment)
+                        getSupportFragmentManager().findFragmentByTag("background");
+                GameResultFragment grFragment = ( GameResultFragment )
+                        getSupportFragmentManager().findFragmentById(R.id.game_result);
+                // retrieve warning and display it
+                grFragment.setResult(background.warning());
+            }
 
             int result = game.gameOver();
             if (result != 0) /* game is over */ {
